@@ -13,9 +13,12 @@ class HomeScrenn extends GetView<HomeController> {
       backgroundColor: AppColors.sand,
       appBar: AppBar(
         backgroundColor: AppColors.sand2,
-        title: Text('testGetxMvcs',style: AppText.h200,),
+        title: Text(
+          'testGetxMvcs',
+          style: AppText.h200,
+        ),
       ),
-      body: Obx(()=> Center(
+      body: Obx(() => Center(
             child: Text(
               '${controller.counter}',
               style: AppText.h200,
@@ -24,17 +27,29 @@ class HomeScrenn extends GetView<HomeController> {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          FloatingActionButton(backgroundColor: AppColors.coral,onPressed:controller.incremention,child: Icon(Icons.add,color: AppColors.sand,)),
-
+          FloatingActionButton(
+              backgroundColor: AppColors.coral,
+              onPressed: controller.incremention,
+              child: Icon(
+                Icons.add,
+                color: AppColors.sand,
+              )),
           FloatingActionButton(
               backgroundColor: AppColors.sand,
               onPressed: controller.decrementation,
               child: Icon(
-                Icons.add,
+                Icons.remove,
                 color: AppColors.coral,
-              )),        ],
+              )),
+          FloatingActionButton(
+              backgroundColor: AppColors.sand2,
+              onPressed: controller.Navigate,
+              child: Icon(
+                Icons.navigate_next,
+                color: AppColors.coral,
+              ))
+        ],
       ),
-      
     );
   }
 }

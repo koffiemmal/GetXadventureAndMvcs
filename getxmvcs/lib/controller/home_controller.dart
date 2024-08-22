@@ -7,11 +7,22 @@ class HomeController extends GetxController {
   void incremention() {
     counter++;
   }
-   void decrementation() {
+
+  void decrementation() {
+    if (counter<= 0) {
+      
+    }else{
+
     counter--;
+
+    }
   }
 
- // void seeNumber(){
- //   ScaffoldMessenger.of(Buil context).
+  void Navigate() {
+    Get.toNamed('/news');
+  }
+
+  // void seeNumber(){
+  //   ScaffoldMessenger.of(Buil context).
   //}
 }
